@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>
+      <span id="login" onclick="showlogin(this)">Login</span> | 
+      <span id="sign-up" onclick="showsignup(this)">Sign up</span>  <!--选择登录和注册-->
+    </h1>
+
+    <div id="login-form">
+      <form>
+        <input type="text" placeholder="Account  number" class="txt" />
+        <input type="password" placeholder="Password" class="txt" />
+        <input type="button" value="Login" class="btn" />
+      </form>                                                         <!--登录表单-->
+    </div>
+
+    <div id="sign-up-form">
+        <form>
+          <input type="tel" placeholder="Telephone number" class="txt" />
+          <input type="text" placeholder="Identifying code" class="txt" />
+          <input type="password" placeholder="Input password" class="txt" />
+          <input type="password-2" placeholder="Input password again" class="txt" />
+          <input type="button" value="Get identifying code" class="btn" />
+          <input type="button" value="sign up" class="btn" />             <!--注册表单-->
+        </form>
+    </div>
+  </body>
+
+  <script>
+    function showsignup(option2){   //显示注册表单的函数:设置登录表单visibility:hidden;注册表单visibility:visible.
+      var sign = document.getElementById("sign-up-form");
+      var login = document.getElementById("login-form");
+      var option1 = document.getElementById("login");
+      sign.style.visibility="visible";
+      login.style.visibility="hidden";
+      option1.style.color="grey";
+      option2.style.color="white";
+     }
+
+    function showlogin(option1){  //显示登录表单的函数:设置注册表单visibility:hidden;登录表单visibility:visible.
+      var sign = document.getElementById("sign-up-form");
+      var login = document.getElementById("login-form");
+      var option2 = document.getElementById("sign-up");
+      login.style.visibility="visible";
+      sign.style.visibility="hidden";
+      option2.style.color="grey";
+      option1.style.color="white";
+     }
+  </script>
+</html>

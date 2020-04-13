@@ -1,0 +1,116 @@
+﻿@charset "utf-8";
+/* 初始化部分 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-color: #a29bfe; */
+    height: 100%;
+    background-image: linear-gradient(45deg, #fbc2eb, #a6c1ee);
+}
+
+#box {
+    position: relative;
+    height: 612px;
+    width: 100%;
+}
+
+/* 登录和注册切换部分 */
+.switch {
+  color: lightslategrey;
+  font-size: small;
+  text-decoration:  lightslategrey underline;
+  cursor: pointer;
+}
+
+h1 {
+    font-family:  sans-serif ,Verdana, Tahoma;
+    text-align: center;
+    color: white;
+}
+
+/* 登录表单部分 */
+#login-form {
+    width: 320px;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    font-family:  sans-serif ,Verdana, Tahoma;
+    border: 2px solid outset;
+    border-color: #a6c1ee #a6c1ee #fbc2eb #fbc2eb;
+    border-radius: 12px;
+    background-image: linear-gradient(45deg, #fbc2eb, #a6c1ee);
+  }
+/* 注册表单部分 */
+#sign-up-form {
+    width: 320px;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    font-family:  sans-serif ,Verdana, Tahoma;
+    display: none; 
+    border: 2px solid outset;
+    border-color: #a6c1ee #a6c1ee #fbc2eb #fbc2eb;
+    border-radius: 12px;
+    background-image: linear-gradient(45deg, #fbc2eb, #a6c1ee);
+}
+/* 设置input部分*/
+input {
+    display: block;
+    width: 100%;
+    padding: 0 16px;
+    height: 44px;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+  }
+/* 输入框效果部分 */
+.txt {
+    margin: 20px 0;
+    background-color: rgba(255,255,255,.5);
+    border-radius: 6px;
+  }
+
+.txt:focus {
+    background: white;
+  }
+/* 按钮效果部分 */
+.btn{
+    margin-top: 40px;
+    background:rgba(255,255,255,.5);
+    color: grey;
+    border-radius: 44px;
+    cursor: pointer; 
+  }
+
+.btn + .btn {
+    margin-top: 20px;
+    background:rgba(255,255,255,.5);
+    color: grey;
+    border-radius: 44px;
+    cursor: pointer;
+  
+}
+
+.btn:hover{
+    transform: scale(0.96);
+  }
+
+.btn:active {
+      color: white;
+  }
+
+ 
+
+  

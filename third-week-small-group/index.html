@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>login or sign up</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="box">
+      <div id="login-form">
+        <h1>
+          Login
+        </h1>
+        <form action="" name="loginForm" onsubmit="return checkForm(this)" method="POST">
+          <input type="text" placeholder="Account  number" class="txt" id="accnt"/>
+          <input type="password" placeholder="Password" class="txt" id="psw"/>
+          <input type="submit" value="Login" class="btn" />
+        </form>  
+        <span class="switch" onclick="showsignup()">Go to sign up</span>                                                       <!--登录表单-->
+      </div>
+      <div id="sign-up-form">
+        <h1>
+          Sign up
+        </h1>
+        <form action="" name="signupForm" onsubmit="return checkForm(this)" method="POST">
+          <input type="text" placeholder="Mobilephone number" class="txt" id="phone"/>
+          <input type="text" placeholder="Identifying code" class="txt" id="code"/>
+          <input type="password" placeholder="Input password" class="txt" id="psw1"/>
+          <input type="password" placeholder="Input password again" class="txt" id="psw2"/>
+          <input type="button" value="Get identifying code" class="btn" />
+          <input type="submit" value="sign up" class="btn" />             <!--注册表单-->
+        </form>
+        <span class="switch" onclick="showlogin()">Go to login</span>
+      </div>
+      <div style="clear: both;"></div>
+    </div>
+
+    <script src="javascript.js"></script>
+  </body>
+</html>

@@ -94,15 +94,6 @@ input {
     cursor: pointer; 
   }
 
-.btn + .btn {
-    margin-top: 20px;
-    background:rgba(255,255,255,.5);
-    color: grey;
-    border-radius: 44px;
-    cursor: pointer;
-  
-}
-
 .btn:hover{
     transform: scale(0.96);
   }

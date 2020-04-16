@@ -12,8 +12,8 @@
         <h1>
           Login
         </h1>
-        <form action="" name="loginForm" onsubmit="return checkForm(this)" method="POST">
-          <input type="text" placeholder="Account  number" class="txt" id="accnt"/>
+        <form action="" name="loginForm" onsubmit="return processData(this)" method="POST">
+          <input type="text" placeholder="Account" class="txt" id="accnt_1"/>
           <input type="password" placeholder="Password" class="txt" id="psw"/>
           <input type="submit" value="Login" class="btn" />
         </form>  
@@ -23,12 +23,13 @@
         <h1>
           Sign up
         </h1>
-        <form action="" name="signupForm" onsubmit="return checkForm(this)" method="POST">
+        <form action="" name="signupForm" onsubmit="return processData(this)" method="POST">
+          <input type="text" placeholder="Account" class="txt" id="accnt_2"/>
           <input type="text" placeholder="Mobilephone number" class="txt" id="phone"/>
-          <input type="text" placeholder="Identifying code" class="txt" id="code"/>
-          <input type="password" placeholder="Input password" class="txt" id="psw1"/>
-          <input type="password" placeholder="Input password again" class="txt" id="psw2"/>
-          <input type="button" value="Get identifying code" class="btn" />
+          <input type="password" placeholder="Input password" class="txt" id="psw_1"/>
+          <input type="password" placeholder="Input password again" class="txt" id="psw_2"/>
+          <input type="text" placeholder="Email" class="txt" id="email"/>
+          <input type="text" placeholder="Your name" class="txt" id="user"/>
           <input type="submit" value="sign up" class="btn" />             <!--注册表单-->
         </form>
         <span class="switch" onclick="showlogin()">Go to login</span>
@@ -36,6 +37,7 @@
       <div style="clear: both;"></div>
     </div>
 
-    <script src="javascript.js"></script>
+    <script src="behavior.js"></script>
+    <script src="sendData.js"></script>
   </body>
 </html>

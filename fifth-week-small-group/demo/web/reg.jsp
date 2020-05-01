@@ -1,4 +1,4 @@
-<%--
+﻿<%--
   Created by IntelliJ IDEA.
   User: Pluto
   Date: 2020/4/26
@@ -20,7 +20,7 @@
         <h1>
             Sign up
         </h1>
-        <form action="/web/regist" name="signupForm" onsubmit="return processData(this)" method="POST">
+        <form action="/web/regist" name="signForm" onsubmit="return processData(this)" method="POST">
             <input type="text" placeholder="Account" class="txt" id="accnt_2" name="usersname"/>
             <input type="text" placeholder="Mobilephone number" class="txt" id="phone" name="telephone"/>
             <input type="password" placeholder="Input password" class="txt" id="psw_1" name="password"/>

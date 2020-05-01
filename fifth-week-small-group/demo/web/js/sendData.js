@@ -1,4 +1,4 @@
-
+﻿
 
 function isNotEmpty(thisform)
 {
@@ -23,7 +23,7 @@ function processData(thisform){
     if(!isNotEmpty(thisform)){
         return false;
     }
-    if("loginForm" == thisform.name)
+    if("loginForm" === thisform.name)
     {
         let Ldata = {
             accout1: document.getElementById("accnt_1").value,
@@ -39,9 +39,9 @@ function processData(thisform){
             alert("密码应为8-16位！");
             return false;
         }
-        checkUserName();
+
     }
-    else if("signupForm" == thisform.name)
+    else
     {
         let Sdata = {
             accout2: document.getElementById("accnt_2").value,
@@ -79,5 +79,5 @@ function processData(thisform){
             return false;
         }
     }
-    return sendData(thisform);
+    return true;
 }

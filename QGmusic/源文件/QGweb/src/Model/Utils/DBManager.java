@@ -5,18 +5,16 @@ import java.sql.*;
 /**
  * 用于管理数据库连接：创建连接 关闭连接
  *
- *
  */
 public class DBManager {
-
+	//数据库信息基本设置
 	private static final String driver = "com.mysql.cj.jdbc.Driver";
 	private static final String url = "jdbc:mysql://localhost:3306/qgmusic?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false";
 	private static final String username = "root";
 	private static final String password = "13692958402+l";
 
-	/**
-	 * 3.在静态块中通过反射加载数据库驱动
-	 */
+
+	 //在静态块中通过反射加载数据库驱动
 	static {
 		try {
 			Class.forName(driver);

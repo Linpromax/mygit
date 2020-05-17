@@ -1,8 +1,6 @@
 package Model.DTO;
 /**
  * UserDTO类用于存放一个用户信息
- *
- *
  */
 public class UserDTO {
 	private int userId;//用户编号

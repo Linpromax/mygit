@@ -26,22 +26,22 @@ public class UserDAO {
     public boolean insertUser(UserDTO user) {
         boolean flag = false;
         try {
-            conn = DBManager.getConn();
-            String sql = "insert into qgusers values(null,?,?,?,?)";
+            conn = DBManager.getConn();  //数据库链接
+            String sql = "insert into qgusers values(null,?,?,?,?)";  //准备sql语句
             ps = conn.prepareStatement(sql);
             // 给？赋值
             ps.setString(1, user.getUserAccout());
             ps.setString(2, user.getUserPassword());
             ps.setString(3, user.getUserName());
             ps.setString(4, user.getUserTel());
-            // 执行SQL
+            // 执行sql
             int i = ps.executeUpdate();
             // 处理结果
             flag = i > 0 ? true : false;
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            DBManager.close(null, ps, conn);
+            DBManager.close(null, ps, conn);  //关闭数据库链接
         }
         return flag;
     }
@@ -62,8 +62,8 @@ public class UserDAO {
             ps = conn.prepareStatement(sql);
             ps.setString(1, accout);
             ps.setString(2, password);
+            //从数据库中查询
             rs = ps.executeQuery();
-
             while (rs.next()) {
                 user = new UserDTO(rs.getInt("userId"),
                                 rs.getString("userAccout"),

@@ -1,4 +1,4 @@
-//搜索结果展示层
+﻿//搜索结果展示层
 var searchResult = document.getElementById("searchResult");
 //歌曲列表展示层
 var resultBox = document.getElementById("resultBox");
@@ -147,14 +147,16 @@ function cb(data) {
 window.onload = function () {
   	var oSearch = document.getElementById("music");//搜索框
 	var Btn = document.getElementById("searchMusic");//搜索按钮
-  	Btn.addEventListener("click", search());
+  	Btn.onclick = function() {
+		search();
+	};
 	oSearch.onkeydown = function (event) {
 		var theEvent = window.event || event;
 		var code = theEvent.keyCode || theEvent.which;
 		if (code == 13) {  //回车键的键值为13
 			search();  //调用搜索事件
 		}
-	}
+	};
 
   	function search() {
 		if (oSearch.value.trim()) {  // 去除输入的空格
